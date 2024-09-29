@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hangman Game</h1>
+    <svg id="hangman-drawing" width="200" height="250" viewBox="0 0 200 250">
+      <line x1="10" y1="240" x2="150" y2="240" stroke="#333" stroke-width="5" />
+      <line x1="80" y1="240" x2="80" y2="50" stroke="#333" stroke-width="5" />
+      <line x1="80" y1="50" x2="140" y2="50" stroke="#333" stroke-width="5" />
+      <line x1="140" y1="50" x2="140" y2="70" stroke="#333" stroke-width="5" />
+      <!-- Hangman parts, hidden initially -->
+      <circle class="hangman-part" cx="140" cy="90" r="20" stroke="#333" stroke-width="5" fill="none" />
+      <line class="hangman-part" x1="140" y1="110" x2="140" y2="170" stroke="#333" stroke-width="5" />
+      <line class="hangman-part" x1="140" y1="130" x2="120" y2="150" stroke="#333" stroke-width="5" />
+      <line class="hangman-part" x1="140" y1="130" x2="160" y2="150" stroke="#333" stroke-width="5" />
+      <line class="hangman-part" x1="140" y1="170" x2="120" y2="200" stroke="#333" stroke-width="5" />
+      <line class="hangman-part" x1="140" y1="170" x2="160" y2="200" stroke="#333" stroke-width="5" />
+    </svg>
+
+    <div id="word-container"></div>
+    <p id="message"></p> <!-- Message display -->
+    <div id="alphabet-container"></div>
+    <div id="hangman-container">
+      <p>Wrong Attempts: <span id="wrong-attempts">0</span>/6</p>
+    </div>
+    <button id="hint-btn" style="display: none;">Show Hint</button>
+    <button id="reset-btn">Restart Game</button>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

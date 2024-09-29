@@ -1,0 +1,141 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif; /* Base font */
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent for depth */
+  padding: 30px; /* Adjusted padding */
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for depth */
+  max-width: 400px; /* Adjust the maximum width */
+  width: 90%; /* Responsive width */
+  height: 550px; /* Set a fixed height */
+  overflow: auto; /* Allow scrolling if content exceeds the height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.container:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25); /* Increase shadow effect on hover */
+}
+
+h1 {
+  font-family: 'Pacifico', cursive; /* Creative font for title */
+  color: #333;
+  font-size: 3rem; /* Increased font size for better impact */
+  margin-bottom: 20px; /* Increased margin */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+#word-container {
+  font-size: 2.5rem; /* Increased font size for better readability */
+  letter-spacing: 15px; /* Increased letter spacing */
+  margin: 15px; /* Adjusted margin */
+  font-weight: bold;
+  color: #444;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#alphabet-container {
+  margin: 15px; /* Adjusted margin */
+}
+
+#alphabet-container button {
+  margin: 5px;
+  padding: 10px 15px; /* Increased padding for better fit */
+  font-size: 1.2rem; /* Increased font size */
+  background-color: #4CAF50; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  font-family: 'Creepster', cursive; /* Creative font for buttons */
+}
+
+#alphabet-container button:hover {
+  background-color: #45a049; /* Darken button color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#alphabet-container button:disabled {
+  background-color: #888; /* Disabled button color */
+  cursor: not-allowed; /* Not-allowed cursor */
+  transform: scale(1); /* No scaling */
+}
+
+#hangman-container {
+  margin: 15px; /* Adjusted margin */
+  font-size: 1.8rem; /* Increased font size */
+  color: #333; /* Font color */
+  font-family: 'Bangers', cursive; /* Fun font for hangman text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#message {
+  font-size: 1.8rem; /* Increased font size */
+  font-weight: bold;
+  margin: 15px; /* Adjusted margin */
+  animation: fadeIn 1s ease; /* Fade-in animation */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Celebration message */
+.celebrate {
+  color: #28a745; /* Green for celebration */
+  animation: celebrateAnimation 1s ease forwards;
+}
+
+/* Sad message */
+.sad {
+  color: #dc3545; /* Red for sadness */
+  animation: sadAnimation 1s ease forwards;
+}
+
+@keyframes celebrateAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes sadAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+#reset-btn {
+  padding: 12px 20px; /* Adjusted padding */
+  font-size: 1.2rem; /* Increased font size */
+  cursor: pointer; /* Pointer cursor */
+  background-color: #007BFF; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  display: none; /* Initially hidden */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
+}
+
+#reset-btn:hover {
+  background-color: #0056b3; /* Darken button color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#hangman-drawing {
+  margin: 15px; /* Adjusted margin */
+  width: 150px; /* Fixed width for SVG */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/*
